@@ -7,7 +7,7 @@ _: {
         requirements = ''
           setuptools
           mypy
-          factory_boy
+          factory-boy
         '';
       };
     };

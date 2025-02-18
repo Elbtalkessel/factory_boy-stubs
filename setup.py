@@ -24,7 +24,7 @@ def find_stub_files() -> list[str]:
 with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
-dependencies = ["factory_boy"]
+dependencies = ["factory-boy"]
 
 setup(
     name=PACKAGE_NAME,
