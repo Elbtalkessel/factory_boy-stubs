@@ -41,7 +41,7 @@ setup(
     py_modules=[],
     python_requires=">=3.8",
     install_requires=dependencies,
-    packages=[STUBS_FOR, *find_packages()],
+    packages=[PACKAGE_NAME, *find_packages()],
     package_data={
         PACKAGE_NAME: find_stub_files(),
     },
