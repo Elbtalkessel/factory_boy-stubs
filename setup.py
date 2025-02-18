@@ -3,8 +3,7 @@ import os
 
 from setuptools import find_packages, setup
 
-STUBS_FOR = "factory_boy"
-PACKAGE_NAME = f"{STUBS_FOR}-stubs"
+PACKAGE_NAME = "factory-stubs"
 
 
 def find_stub_files() -> list[str]:
@@ -25,12 +24,12 @@ def find_stub_files() -> list[str]:
 with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
-dependencies = [STUBS_FOR]
+dependencies = ["factory_boy"]
 
 setup(
     name=PACKAGE_NAME,
     version="0.0.1",
-    description=f"Mypy stubs for {STUBS_FOR}",
+    description=f"Mypy stubs for {dependencies[0]}",
     long_description=readme,
     long_description_content_type="text/markdown",
     license="MIT",

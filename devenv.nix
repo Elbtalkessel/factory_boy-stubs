@@ -1,9 +1,4 @@
-_:
-let
-  package = "factory_boy";
-  name = "factory";
-in
-{
+_: {
   languages = {
     python = {
       enable = true;
@@ -12,7 +7,7 @@ in
         requirements = ''
           setuptools
           mypy
-          ${package}
+          factory_boy
         '';
       };
     };
@@ -33,9 +28,9 @@ in
 
   scripts = {
     makestubs.exec = ''
-      stubgen --export-less -p ${name} -o .
-      rm -rf ${package}-stubs 2>/dev/null
-      mv ${name} ${package}-stubs
+      stubgen --export-less -p factory -o .
+      rm -rf factory-stubs 2>/dev/null
+      mv factory factory-stubs
     '';
   };
 }
