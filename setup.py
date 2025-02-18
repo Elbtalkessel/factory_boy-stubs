@@ -3,7 +3,7 @@ import os
 
 from setuptools import find_packages, setup
 
-STUBS_FOR = "async_factory_boy"
+STUBS_FOR = "factory_boy"
 PACKAGE_NAME = f"{STUBS_FOR}-stubs"
 
 
@@ -25,7 +25,7 @@ def find_stub_files() -> list[str]:
 with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
-dependencies = [STUBS_FOR, "factory_boy"]
+dependencies = [STUBS_FOR]
 
 setup(
     name=PACKAGE_NAME,
